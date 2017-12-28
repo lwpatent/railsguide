@@ -1,0 +1,25 @@
+<!--
+@Author: timaanonsen
+@Date:   12-28-2017 08:12::80
+@Filename: _comment.html.erb
+@Last modified by:   timaanonsen
+@Last modified time: 12-28-2017 09:12::85
+-->
+
+
+
+<p>
+  <strong>Commenter:</strong>
+  <%= comment.commenter %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= comment.body %>
+</p>
+
+<p>
+  <%= link_to 'Destroy Comment', [comment.article, comment],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+</p>

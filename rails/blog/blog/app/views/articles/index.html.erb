@@ -1,0 +1,30 @@
+<!--
+@Author: timaanonsen
+@Date:   12-27-2017 13:12::64
+@Filename: index.html.erb
+@Last modified by:   timaanonsen
+@Last modified time: 12-28-2017 07:12::91
+-->
+
+
+
+<h1>Listing articles</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+  </tr>
+
+  <% @articles.each do |article| %>
+    <tr>
+      <td><%= article.title %></td>
+      <td><%= article.text %></td>
+      <td><%= link_to 'Show', article_path(article) %></td>
+      <td><%= link_to 'Edit', edit_article_path(article) %></td>
+      <td><%= link_to 'Destroy', article_path(article),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
