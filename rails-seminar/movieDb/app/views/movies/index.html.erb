@@ -1,0 +1,21 @@
+<!--
+@Author: timaanonsen
+@Date:   12-29-2017 11:12::23
+@Filename: index.html.erb
+@Last modified by:   timaanonsen
+@Last modified time: 12-29-2017 11:12::23
+-->
+
+
+<!--  -->
+
+<h1>Movies</h1>
+ <div><%= @movies %></div>
+
+<ul>
+  <% @movies.each do |movie| %>
+    <li><%= movie %></li>
+  <% end %>
+</ul>
+
+  
